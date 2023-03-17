@@ -204,8 +204,6 @@ def run(weights=ROOT / 'yolov5s.pt',  # model.pt path(s)
 
         # Print time (inference-only)
         LOGGER.info(f'{s}Done. ({t3 - t2:.3f}s)')
-    if len(pred.shape) == 1:
-        exit(0)
 
     # Print results
     t = tuple(x / seen * 1E3 for x in dt)  # speeds per image
